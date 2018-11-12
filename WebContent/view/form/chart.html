@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>서울시 도서관</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#headers").load("nav.jsp");  // 원하는 파일 경로를 삽입하면 된다
+	$("#footers").load("footer.jsp");
+
+    var gu1=0, gu2=0, gu3=0, gu4=0, gu5=0, gu6=0, gu7=0, gu8=0, gu9=0, gu10=0, gu11=0, gu12=0, gu13=0, gu14=0, gu15=0, gu16=0, gu17=0, gu18=0, gu19=0, gu20=0, gu21=0, gu22=0, gu23=0, gu24=0, gu25=0;
+    
+    var list1=[], list2=[], list3=[], list4=[], list5=[], list6=[], list7=[], list8=[], list9=[];
+        
+       $.ajax(
+                {
+                  type:"get",
+                  url:"http://openapi.seoul.go.kr:8088/4767516a426173643835474c565647/json/SeoulPublicLibrary/1/200", 
+                  dataType:"json", //point
+                  success:function(data){
+                      $.each(data.SeoulPublicLibrary.row,function(index, obj){
+                          //가공처리
+                          //console.log("index: "+index+" obj: "+obj);
+                          
+                          if(Number(obj.GU_CODE) == 0001){
+                              gu1 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0002){
+                              gu2 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0003){
+                              gu3 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0004){
+                              gu4 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0005){
+                              gu5 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0006){
+                              gu6 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0007){
+                              gu7 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0008){
+                              gu8 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0009){                         
+                              gu9 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0010){
+                              gu10 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0011){
+                              gu11 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0012){
+                              gu12 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0013){
+                              gu13 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0014){
+                              gu14 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0015){
+                              gu15 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0016){
+                              gu16 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0017){
+                              gu17 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0018){
+                              gu18 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0019){
+                              gu19 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0020){
+                              gu20 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0021){
+                              gu21 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0022){
+                              gu22 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0023){
+                              gu23 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0024){
+                              gu24 += 1;
+                          }
+                          if(Number(obj.GU_CODE) == 0025){
+                              gu25 += 1;
+                          }
+
+                      });
+                      //console.log("line1: "+line1+" line2: "+line2);
+                  },
+                  erro:function(xhr){
+          
+                  }
+              }
+              );
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+ 
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '도서관');
+            data.addColumn('number', '도서관 수');
+            // 차트 데이터 설정
+             data.addRows([['강서구', gu1], ['양천구', gu2], ['영등포구', gu3], ['동작구', gu4], ['관악구', gu5], ['금천구', gu6], ['서초구', gu7], ['강남구', gu8], ['송파구', gu9], ['강동구', gu10], ['마포구', gu11], ['용산구', gu12], ['성동구', gu13], ['서대문구', gu14], ['중구', gu15], ['은평구', gu16], ['종로구', gu17], ['동대문구', gu18], ['성북구', gu19], ['중랑구', gu20], ['강북구', gu21], ['노원구', gu22], ['도봉구', gu23], ['광진구', gu24], 
+                ['구로구', gu25]]); 
+             console.log(data);
+ 
+            // 그래프 옵션
+            var options = {
+                title : '서울시 구별 도서관 수', // 제목
+                width : 1200, // 가로 px
+                height : 600, // 세로 px
+                /* bar : {
+                    groupWidth : '80%' // 그래프 너비 설정 %
+                }, */
+                legend : {
+                    position : 'top' // 항목 표시 여부
+                },
+                colors: ['#EF7C1C']
+                
+            };
+ 
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+        
+ 
+});
+   
+      
+ 
+ 
+</script>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align : center;
+    margin : auto;
+}
+table th { background : orange;}
+ 
+</style>
+ 
+</head>
+<body>
+<div id="headers"></div>
+<div class="container">
+<label style="font-size: 30px">서울시 구별 도서관 통계</label><br><br>
+<div id="chart_div"></div>
+</div>
+<div id="footers"></div>
+</body>
+</html>

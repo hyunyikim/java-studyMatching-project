@@ -1,0 +1,37 @@
+  	#studyDetailRow{
+  		background-color: #FFF;
+  	}
+  	#studyImg{
+  		margin-top: 40px;
+  		width:100% !important;
+  		height: 100%  !important;
+  		object-fit: contain !important;
+  	}
+  	#mentoCommentBtn{
+  		width: 120px;
+  		height: 74px;
+  		margin-bottom: 64px;
+  		margin-left: 5px;
+  	}
+  	#mentoCommentTxt{
+  		width: 900px;
+  		display: inline;
+  	}
+  	#studySubject{
+  		margin-left: 50px;
+  		margin-right: 50px;
+  	}
+  	#mentoIntroduce{
+  		margin-left: 50px;
+  		margin-right: 50px;
+  	}
+  	#mentoCommentDiv {
+  		margin-left: 50px;
+  	}
+  	#mentoCommentContent{
+  		margin-left: 50px;
+  		margin-right: 50px;
+  	}
+  	#mentoCommenth{
+  		margin-bottom: 25px;
+  	}

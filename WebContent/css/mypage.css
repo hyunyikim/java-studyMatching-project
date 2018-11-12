@@ -1,0 +1,39 @@
+.my-page {
+	width: 100%;
+	height: 155px;
+	background-color: #5a5e64;
+}
+
+.my-page-header {
+	padding-top: 0px;
+	width: 970px !important;
+}
+
+.tabs {
+	height: 50px;
+    margin-left: 20pxs;
+    padding-top: 22px;
+	display: inline-block;
+}
+.username{
+width: 100%;
+display: inline-block;
+padding-left:20px;
+border-bottom:1px solid #6a6e73;}
+.tab{    display: inline-block;
+    width: 75pt;
+    height: 72px;
+    line-height: 72px;
+    color: #aeb5be;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;}
+.myContent-box{
+    margin: 50px auto 75pt;
+    padding: 24px;
+    width: 60pc;
+    background: #fff;
+    box-sizing: border-box;
+    }
+.myContent{text-align:center;}
+ 

@@ -1,0 +1,12 @@
+	.filterSection {padding: 40px;}
+    #studySection {background-color: #FFF; padding:40px; margin-bottom:20px;}
+    .dropdown, #filterbtn {display: inline;}
+    #filterbackground {background-color: #FFF; padding: 13px; margin-bottom: 20px;}   
+    
+    #img-circle2{
+    max-width: 100%;
+    height: 100%;
+    }
+    #filterSubject{
+    	margin-bottom: 20px;
+    }

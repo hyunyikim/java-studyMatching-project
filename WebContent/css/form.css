@@ -1,0 +1,13 @@
+/***********************************
+Form
+************************************/
+div.div-form{
+   margin: auto;
+   width: 600px;
+   padding: 20px 50px 50px 50px;
+   background-color:#fff;
+}
+.div-form h2{
+   margin-bottom:30px;
+   text-align: center;
+}

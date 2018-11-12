@@ -1,0 +1,27 @@
+
+      #studyPayDiv{
+        text-align: center;
+        background-color: none;
+      }
+      #studyDetailDiv{
+      	align: center;
+      }
+      #nextBtn{
+      	color: white;
+      }
+      #studySubject{
+      	margin: 30px;
+      }
+      #studyDetailDiv{
+      	background-color: #FFF;
+      	padding: 30px;
+      }
+      #studyPayDiv{
+      	background-color: #FFF;
+      	padding: 20px;
+      }
+      #studyDetailImg{
+      	text-align: center;
+      }
+       
+     
